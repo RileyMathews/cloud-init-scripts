@@ -24,9 +24,6 @@ COPY_AUTHORIZED_KEYS_FROM_ROOT=true
 OTHER_PUBLIC_KEYS_TO_ADD=(
 )
 
-# pythhon version setup
-PYTHON_VERSION=3.10.6
-
 ####################
 ### SCRIPT LOGIC ###
 ####################
