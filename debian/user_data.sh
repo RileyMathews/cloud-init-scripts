@@ -28,11 +28,6 @@ OTHER_PUBLIC_KEYS_TO_ADD=(
 ### SCRIPT LOGIC ###
 ####################
 
-# install and update packages
-apt update -y
-apt upgrade -y
-apt install git -y
-
 # Add sudo user and grant privileges
 useradd --create-home --shell "/bin/bash" --groups sudo "${USERNAME}"
 
@@ -56,11 +51,6 @@ chage --lastday 0 "${USERNAME}"
 # Create SSH directory for sudo user
 home_directory="$(eval echo ~${USERNAME})"
 mkdir --parents "${home_directory}/.ssh"
-
-# clone down init scripts repo
-mkdir "${home_directory}/code"
-git clone https://github.com/rileymathews/cloud-init-scripts /home/riley/code/cloud-init-scripts
-chown --recursive "${USERNAME}":"${USERNAME}" "${home_directory}/code"
 
 # Copy `authorized_keys` file from root if requested
 if [ "${COPY_AUTHORIZED_KEYS_FROM_ROOT}" = true ]; then
