@@ -4,10 +4,10 @@ PYTHON_VERSION=3.10.6
 PYTHON_MINOR=3.10
 
 sudo apt update -y
-sudo apt upgrade -yq
+sudo apt upgrade -y
 
 # install python
-sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -yq
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -y
 
 cd /tmp
 wget https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
